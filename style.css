@@ -1,0 +1,482 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Poppins&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Poppins;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2% 4%;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  height: 6vh;
+}
+
+#nav-left {
+  gap: 40px;
+}
+#nav-left > img {
+  padding: 60px;
+}
+nav > section {
+  display: flex;
+  align-items: center;
+}
+
+#nav-btns {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  padding-inline: 50px;
+}
+
+#nav-btns > a {
+  display: flex;
+  padding: 10px;
+  gap: 5px;
+  text-decoration: none;
+  background-color: white;
+}
+
+#nav-btns > a > button {
+  text-decoration: none;
+  background-color: white;
+  border: none;
+  color: var(--Black, #253d4e);
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+#nav-btns a:first-child > button {
+  color: #509e2f;
+}
+
+#nav-right {
+  padding-inline: 5%;
+}
+
+.hero-section {
+  width: 90vw;
+  height: 50vh;
+  /* border: 2px solid brown; */
+  margin: auto;
+  background-image: url(./resources/Hero-img.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-section p:first-child {
+  color: #dc582a;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+.hero-section > p {
+  color: #fff;
+  /* font-size: 40px; */
+  font-size: 2.5em;
+  font-weight: 700;
+  /* padding-left: 3.5%; */
+}
+.hero-section p:last-child {
+  color: #fff;
+  /* font-size: 20px; */
+  font-size: 1.3em;
+  font-weight: 500;
+}
+.hero-section > p {
+  padding-left: 5vw;
+  align-items: center;
+}
+
+.search {
+  width: 90vw;
+  /* border: 2px solid saddlebrown; */
+  margin: auto;
+  margin-top: 3%;
+}
+
+.search h2 {
+  color: #252525;
+  font-size: 22px;
+  font-weight: 600;
+}
+.search > div {
+  width: 100%;
+  display: flex;
+  height: 45px;
+  padding-top: 2%;
+}
+.search > div > input {
+  width: 85vw;
+  border-radius: 2px 0px 0px 2px;
+  background: #f3f3f3;
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+}
+.search > div > button {
+  width: 50px;
+  border: none;
+  border-radius: 0px 2px 2px 0px;
+  background: #509e2f;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.filter-container {
+  width: 90vw;
+  margin: auto;
+  padding: 5% 0;
+}
+.type-filter {
+  display: flex;
+  gap: 30px;
+}
+.type-filter button:hover {
+  scale: 1.1;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+#showAll {
+  display: flex;
+  width: 236.8px;
+  height: 86px;
+  padding: 30px 29.8px 30px 29px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  background: #eaaa00;
+  border: none;
+}
+#showVeg {
+  display: flex;
+  width: 236.8px;
+  height: 86px;
+  padding: 30px 26.6px 30px 27.2px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  background: #c4d600;
+  border: none;
+}
+#showNonVeg {
+  display: flex;
+  width: 236.8px;
+  height: 86px;
+  padding: 30px 22.4px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  background: #dc582a;
+  border: none;
+}
+.type-filter > button {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+}
+.type-filter > button > p > img {
+  margin-top: 10px;
+}
+
+.main {
+  display: flex;
+  width: 90vw;
+  margin: auto;
+}
+#sidebar {
+  flex: 1;
+  padding-left: 1%;
+}
+#recipeContainer {
+  flex: 3;
+  flex-wrap: wrap;
+  display: flex;
+  gap: 20px;
+}
+#sidebar > h3 {
+  color: #252525;
+  font-size: 22px;
+  font-weight: 600;
+}
+#sidebar > p {
+  color: #252525;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 0;
+}
+#sidebar > label > input {
+  border: 1px solid red;
+  margin: 10px 0;
+}
+#sidebar > label {
+  color: #253d4e;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* ------------------------CARDS SECTION------------------------ */
+
+.card {
+  width: 300px;
+  height: 315px;
+  border-radius: 16px;
+  background: #fff;
+  padding: 10px;
+  /* Shadow/shadow-sm */
+  box-shadow: 0px 3px 8px -1px rgba(50, 50, 71, 0.05),
+    0px 0px 1px 0px rgba(12, 26, 75, 0.24);
+}
+
+#foodImage {
+  width: 289px;
+  height: 200px;
+  border-radius: 16px;
+  padding-left: 5px;
+  padding-top: 5px;
+  /* background: url(<path-to-image>), lightgray 50% / cover no-repeat; */
+}
+
+#foodType {
+  color: #a1a1a1;
+  font-size: 10px;
+  font-weight: 500;
+  padding-left: 10px;
+}
+
+#rowOne {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+}
+
+#rowOne > h2 {
+  color: #252525;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+#rowOne > div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#foodRating {
+  color: var(--Grey, #adadad);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+#rowTwo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+}
+
+#rowTwo > div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+#rowTwo > div > button {
+  background-color: white;
+  border: none;
+}
+#foodTime {
+  color: #dc582a;
+
+  /* Headings/h3 */
+  font-size: 20px;
+  font-weight: 600;
+  /* width: 261px;
+  height: 27px; */
+}
+
+/* ------------------------FOOTER SECTION----------------------- */
+
+.footer-section {
+  width: 90vw;
+  margin: auto;
+  padding-top: 50px;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  margin-bottom: 40px;
+}
+
+.col-1 {
+  width: 20%;
+}
+.col-1 p {
+  color: #253d4e;
+  text-align: justify;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 5%;
+}
+
+.col-2,
+.col-3 {
+  width: 10%;
+}
+
+.col-2 > h4,
+.col-3 > h4 {
+  color: #253d4e;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.col-2 > ul > li > a,
+.col-3 > ul > li > a {
+  color: var(--black-alpha-60, rgba(0, 0, 0, 0.6));
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 125% */
+  text-decoration: none;
+}
+
+.col-2 > ul > li,
+.col-3 > ul > li {
+  list-style: none;
+  padding-top: 20px;
+}
+
+.col-4 {
+  width: 30%;
+}
+
+.col-4 > p {
+  color: var(--black-alpha-60, rgba(0, 0, 0, 0.6));
+  font-size: 14px;
+  font-weight: 300;
+  padding: 10px 0;
+}
+.col-4 > div > input {
+  color: #253d4e;
+  font-size: 16px;
+  font-weight: 400;
+  width: 70%;
+  padding: 5px 8px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+}
+.col-4 > div {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+.col-4 > div > button {
+  padding: 7px 8px;
+  background-color: #509e2f;
+  border: none;
+  border-radius: 3px;
+}
+
+.social {
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+}
+.social > a {
+  border-radius: 50%;
+  color: #2a3342;
+  margin: 0 20px;
+}
+
+#nav-left > span {
+  display: none;
+}
+
+.sideBar {
+  position: fixed;
+  top: 0px;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: white;
+  transition: left 0.3s;
+}
+
+.sideBar > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+}
+#sideBar-nav-btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10px 15px;
+}
+#sideBar-nav-btns > a {
+    margin: 10px 0;
+}
+#sideBar-nav-btns > a:first-child > button {
+    color: #509e2f;
+    /* background-color: red; */
+}
+#sideBar-nav-btns > a > button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.active {
+    left: 0;
+}
+
+
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-top > div {
+    width: 50%;
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  #nav-right {
+    display: none;
+  }
+  #nav-left > span {
+    display: inline-block;
+    padding-left: 20px;
+  }
+  #nav-left > img {
+    padding: 0px;
+  }
+}
+
+@media (max-width: 425px) {
+  .cards {
+    width: 280px;
+  }
+}
